@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://iec.ch/TC57/2011/schema/message" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://iec.ch/TC57/2011/schema/message" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Verb" type="xs:string"/>
+	<xs:element name="Noun" type="xs:string"/>
+	<xs:element name="Revision" type="xs:decimal"/>
+	<xs:element name="Timestamp" type="xs:dateTime"/>
+	<xs:element name="Source" type="xs:string"/>
+	<xs:element name="MessageID" type="xs:string"/>
+	<xs:element name="CorrelationID" type="xs:string"/>
+</xs:schema>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://iec.ch/TC57/2007/Incidents#" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://iec.ch/TC57/2007/Incidents#" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Incidents">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="IncidentRecord">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="mRID" type="xs:string"/>
+							<xs:element name="createdDateTime" type="xs:dateTime"/>
+							<xs:element name="estimatedRestorationTime" type="xs:dateTime"/>
+							<xs:element name="priority" type="xs:unsignedByte"/>
+							<xs:element name="Circuits">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="name" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="IncidentCodes">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="name" type="xs:string"/>
+										<xs:element name="subCode" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="OutageRecord">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="isPlanned" type="xs:boolean"/>
+										<xs:element name="Equipments">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="mRID" type="xs:string"/>
+													<xs:element name="name" type="xs:unsignedShort"/>
+													<xs:element name="Location">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="direction" type="xs:unsignedShort"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="Measurements">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="phases" type="xs:string"/>
+																<xs:element name="DiscreteValues">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="value" type="xs:unsignedByte"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="PSRType">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="mRID" type="xs:string"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="OutageCodes">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="name" type="xs:string"/>
+													<xs:element name="subCode" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="OutageReport">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="criticalCustomerCount" type="xs:unsignedByte"/>
+													<xs:element name="customerCount" type="xs:unsignedByte"/>
+													<xs:element name="totalCml" type="xs:unsignedByte"/>
+													<xs:element name="unrestoredCriticalCustomerCount" type="xs:unsignedByte"/>
+													<xs:element name="unrestoredCustomerCount" type="xs:unsignedByte"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="status">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="value" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="period">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="start" type="xs:dateTime"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="PositionPoint">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="xPosition" type="xs:decimal"/>
+										<xs:element name="yPosition" type="xs:decimal"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Region">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="mRID" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Resolution">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="constructionType" type="xs:string"/>
+										<xs:element name="dataProblem" type="xs:string"/>
+										<xs:element name="failedComponent" type="xs:string"/>
+										<xs:element name="material" type="xs:string"/>
+										<xs:element name="referTo" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="status">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="remark" type="xs:string"/>
+										<xs:element name="value" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Substation">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="mRID" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Zones">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="mRID" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

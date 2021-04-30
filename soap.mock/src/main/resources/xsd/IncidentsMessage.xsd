@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://iec.ch/TC57/2011/IncidentsMessage" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:import schemaLocation="HeaderMessage.xsd" namespace="http://iec.ch/TC57/2011/schema/message"/>
+	<xs:import schemaLocation="PayloadMessage.xsd" namespace="http://iec.ch/TC57/2007/Incidents#"/>
+	<xs:element name="CreatedIncidents">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Header">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element xmlns:q1="http://iec.ch/TC57/2011/schema/message" ref="q1:Verb"/>
+							<xs:element xmlns:q2="http://iec.ch/TC57/2011/schema/message" ref="q2:Noun"/>
+							<xs:element xmlns:q3="http://iec.ch/TC57/2011/schema/message" ref="q3:Revision"/>
+							<xs:element xmlns:q4="http://iec.ch/TC57/2011/schema/message" ref="q4:Timestamp"/>
+							<xs:element xmlns:q5="http://iec.ch/TC57/2011/schema/message" ref="q5:Source"/>
+							<xs:element xmlns:q6="http://iec.ch/TC57/2011/schema/message" ref="q6:MessageID"/>
+							<xs:element xmlns:q7="http://iec.ch/TC57/2011/schema/message" ref="q7:CorrelationID"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Payload">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element xmlns:q8="http://iec.ch/TC57/2007/Incidents#" ref="q8:Incidents"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+ <xs:element name="CreatedIncidentsResponse">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="ResponseMessage" type="xs:string"/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+</xs:schema>
