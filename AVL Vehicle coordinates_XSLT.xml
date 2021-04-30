@@ -1,0 +1,23 @@
+<ChangedVehiclesCoordinates xmlns="http://iec.ch/TC57/2011/VehiclesCoordinatesMessage">
+	<Header>
+		<Verb xmlns="http://iec.ch/TC57/2011/schema/message">changed</Verb>
+		<Noun xmlns="http://iec.ch/TC57/2011/schema/message">VehiclesCoordinates</Noun>
+		<Revision xmlns="http://iec.ch/TC57/2011/schema/message">2.0</Revision>
+		<Timestamp xmlns="http://iec.ch/TC57/2011/schema/message">2003-08-09T02:18:37+02:00</Timestamp>
+		<Source xmlns="http://iec.ch/TC57/2011/schema/message">AVL</Source>
+		<MessageID xmlns="http://iec.ch/TC57/2011/schema/message">12345</MessageID>
+		<CorrelationID xmlns="http://iec.ch/TC57/2011/schema/message">12345</CorrelationID>
+	</Header>
+	<Payload>
+		<VehiclesCoordinates>
+			<Vehicle xmlns="http://iec.ch/TC57/2007/VehiclesCoordinates#">
+				<mRID>PU 4</mRID>
+				<odometerReadDateTime>2021-04-14T14:47:14</odometerReadDateTime>
+				<PositionPoint>
+					<xPosition>724672</xPosition>
+					<yPosition>6180787</yPosition>
+				</PositionPoint>
+			</Vehicle>
+		</VehiclesCoordinates>
+	</Payload>
+</ChangedVehiclesCoordinates>
