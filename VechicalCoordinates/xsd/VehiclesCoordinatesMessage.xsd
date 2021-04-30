@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:veh1="http://iec.ch/TC57/2007/VehiclesCoordinates#" xmlns:veh="http://iec.ch/TC57/2011/VehiclesCoordinatesMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://iec.ch/TC57/2011/VehiclesCoordinatesMessage" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:import schemaLocation="HeaderMessage.xsd" namespace="http://iec.ch/TC57/2011/schema/message"/>
+	<xs:import schemaLocation="PayloadMessage.xsd" namespace="http://iec.ch/TC57/2007/VehiclesCoordinates#"/>
+	<xs:element name="ChangedVehiclesCoordinates">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Header">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="mes:Verb"/>
+							<xs:element ref="mes:Noun"/>
+							<xs:element ref="mes:Revision"/>
+							<xs:element ref="mes:Timestamp"/>
+							<xs:element ref="mes:Source"/>
+							<xs:element ref="mes:MessageID"/>
+							<xs:element ref="mes:CorrelationID"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Payload">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="veh1:VehiclesCoordinates"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://iec.ch/TC57/2007/VehiclesCoordinates#" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://iec.ch/TC57/2007/VehiclesCoordinates#" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="VehiclesCoordinates">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Vehicle">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="mRID" type="xs:string"/>
+							<xs:element name="odometerReadDateTime" type="xs:dateTime"/>
+							<xs:element name="PositionPoint">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="xPosition" type="xs:unsignedInt"/>
+										<xs:element name="yPosition" type="xs:unsignedInt"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
